@@ -1,25 +1,27 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'app_providers.dart';
+part of 'future_provider.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$supabaseClientHash() => r'deacb610ba5a2a6164a9836f0ed10a1e9de80426';
+String _$academicoPostProviderHash() =>
+    r'f448c1cfc6cd0e363b29c3a7498c9d016f6ab626';
 
-/// See also [supabaseClient].
-@ProviderFor(supabaseClient)
-final supabaseClientProvider = Provider<SupabaseClient>.internal(
-  supabaseClient,
-  name: r'supabaseClientProvider',
+/// See also [academicoPostProvider].
+@ProviderFor(academicoPostProvider)
+final academicoPostProviderProvider =
+    FutureProvider<List<AcaPostDomain>>.internal(
+  academicoPostProvider,
+  name: r'academicoPostProviderProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$supabaseClientHash,
+      : _$academicoPostProviderHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef SupabaseClientRef = ProviderRef<SupabaseClient>;
+typedef AcademicoPostProviderRef = FutureProviderRef<List<AcaPostDomain>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

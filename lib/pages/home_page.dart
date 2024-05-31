@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_playground/pages/academico_page.dart';
 import 'package:riverpod_playground/pages/counter_page.dart';
 import 'package:riverpod_playground/pages/simple_provider.dart';
 import 'package:riverpod_playground/pages/widgets/custom_button.dart';
@@ -37,6 +38,10 @@ class HomePageProviders extends ConsumerWidget {
             CustomButton(
               title: 'Counter Provider',
               child: CounterPage(),
+            ),
+            CustomButton(
+              title: 'Future Provider',
+              child: AcademicoPage(),
             ),
           ],
         ),

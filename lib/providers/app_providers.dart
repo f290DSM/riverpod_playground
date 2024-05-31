@@ -19,7 +19,7 @@ final dioProvider = Provider(
   ),
 );
 
-@riverpod
+@Riverpod(keepAlive: true)
 SupabaseClient supabaseClient(SupabaseClientRef ref) {
   return Supabase.instance.client;
 }
