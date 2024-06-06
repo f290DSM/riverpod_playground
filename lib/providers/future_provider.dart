@@ -6,12 +6,13 @@ part 'future_provider.g.dart';
 
 @Riverpod(keepAlive: true)
 FutureOr<List<AcaPostDomain>> academicoPostProvider(
-    AcademicoPostProviderRef ref) async {
+    AcademicoPostProviderRef ref, int catId) async {
   final response = await ref
       .watch(supabaseClientProvider)
       .from('aca_post')
       .select(
-          '*, aca_images!inner(*), aca_tag!inner(*), aca_category!inner(*)');
+          '*, aca_images!inner(*), aca_tag!inner(*), aca_category!inner(*)')
+  .eq("cat_id", catId);
 
   return response.map((e) => AcaPostDomain.fromJson(e)).toList();
 }

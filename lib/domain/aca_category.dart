@@ -6,10 +6,12 @@ part 'aca_category.g.dart';
 class AcaCategory {
   int? id;
   String? description;
+  String? image;
 
   AcaCategory({
     this.id,
     this.description,
+    this.image
   });
 
   factory AcaCategory.fromJson(Map<String, dynamic> json) =>

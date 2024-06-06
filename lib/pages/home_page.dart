@@ -6,6 +6,7 @@ import 'package:riverpod_playground/pages/simple_provider.dart';
 import 'package:riverpod_playground/pages/widgets/custom_button.dart';
 
 import '../providers/app_providers.dart';
+import 'academico_home.dart';
 
 class HomePageProviders extends ConsumerWidget {
   const HomePageProviders({super.key});
@@ -39,9 +40,13 @@ class HomePageProviders extends ConsumerWidget {
               title: 'Counter Provider',
               child: CounterPage(),
             ),
+            // CustomButton(
+            //   title: 'Future Provider',
+            //   child: AcademicoPage(),
+            // ),
             CustomButton(
-              title: 'Future Provider',
-              child: AcademicoPage(),
+              title: 'Home Page Academico',
+              child: AcademicoHomePage(),
             ),
           ],
         ),

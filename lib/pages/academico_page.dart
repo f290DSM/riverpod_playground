@@ -4,11 +4,13 @@ import '../providers/future_provider.dart';
 import 'widgets/academico_posts_page.dart';
 
 class AcademicoPage extends ConsumerWidget {
-  const AcademicoPage({super.key});
+  const AcademicoPage({required this.catId, super.key});
+
+  final int catId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var posts = ref.watch(academicoPostProviderProvider);
+    var posts = ref.watch(academicoPostProviderProvider(catId));
     return Scaffold(
       appBar: AppBar(
         title: const Text('Academico'),
