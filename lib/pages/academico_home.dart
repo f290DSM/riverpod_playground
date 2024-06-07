@@ -2,7 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_playground/pages/widgets/loading_widget.dart';
 import 'package:riverpod_playground/providers/category_provider.dart';
+import 'package:loading_indicator/loading_indicator.dart';
 
 import 'academico_page.dart';
 
@@ -102,7 +104,7 @@ class AcademicoHomePage extends ConsumerWidget {
                   child: Text(error.toString()),
                 );
               },
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => const LoadingWidget(),
             ),
           )
         ],
