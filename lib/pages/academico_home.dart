@@ -68,12 +68,10 @@ class AcademicoHomePage extends ConsumerWidget {
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                AcademicoPage(category: category),
-                          ),
-                        );
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    AcademicoPage(category: category)));
                       },
                       child: Card(
                         child: Column(

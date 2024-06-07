@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_playground/providers/counter_notifier_provider.dart';
 
 import '../providers/app_providers.dart';
 
@@ -20,7 +21,7 @@ class CounterPage extends ConsumerWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 24.0),
               child: Text(
-                '${ref.watch(counterProvider)}',
+                '${ref.watch(counterNotifierProvider)}',
                 style: Theme.of(context).textTheme.displayLarge,
               ),
             ),
@@ -29,7 +30,7 @@ class CounterPage extends ConsumerWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          ref.read(counterProvider.notifier).state++;
+          ref.read(counterNotifierProvider.notifier).increment();
         },
         child: const Icon(Icons.add),
       ),

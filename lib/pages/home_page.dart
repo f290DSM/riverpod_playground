@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_playground/pages/academico_page.dart';
 import 'package:riverpod_playground/pages/counter_page.dart';
+import 'package:riverpod_playground/pages/quotes_page.dart';
 import 'package:riverpod_playground/pages/simple_provider.dart';
 import 'package:riverpod_playground/pages/widgets/custom_button.dart';
 
@@ -47,6 +48,10 @@ class HomePageProviders extends ConsumerWidget {
             CustomButton(
               title: 'Home Page Academico',
               child: AcademicoHomePage(),
+            ),
+            CustomButton(
+              title: 'Quotes Page',
+              child: QuotesPage(),
             ),
           ],
         ),
