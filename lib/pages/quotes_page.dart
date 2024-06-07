@@ -18,9 +18,32 @@ class QuotesPage extends ConsumerWidget {
           final quote = quotes[index];
           return Card(
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 16),
-              child: Text(quote.quote),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 20, 16, 4),
+                  child: Text(
+                    quote.id.toString(),
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
+                  child: Text(
+                    quote.quote,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 20),
+                  child: Text(
+                    quote.author,
+                    style: Theme.of(context).textTheme.labelMedium,
+                  ),
+                ),
+              ],
             ),
           );
         },
