@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_playground/domain/aca_category.dart';
 import '../providers/future_provider.dart';
 import 'widgets/academico_posts_page.dart';
 
 class AcademicoPage extends ConsumerWidget {
-  const AcademicoPage({required this.catId, super.key});
+  const AcademicoPage({required this.category, super.key});
 
-  final int catId;
+  final AcaCategory category;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var posts = ref.watch(academicoPostProviderProvider(catId));
+    var posts = ref.watch(academicoPostProviderProvider(category.id!));
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Academico'),
+        title: Text(category.description!),
       ),
       body: posts.when(
         data: (data) {

@@ -69,7 +69,7 @@ class AcademicoHomePage extends ConsumerWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                AcademicoPage(catId: category.id!),
+                                AcademicoPage(category: category),
                           ),
                         );
                       },
