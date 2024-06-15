@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_playground/pages/academico_page.dart';
 import 'package:riverpod_playground/pages/counter_page.dart';
 import 'package:riverpod_playground/pages/quotes_page.dart';
 import 'package:riverpod_playground/pages/simple_provider.dart';
@@ -26,7 +25,13 @@ class HomePageProviders extends ConsumerWidget {
             icon: ref.watch(themeSwitchProvider)
                 ? const Icon(Icons.dark_mode)
                 : const Icon(Icons.light_mode),
-          )
+          ),
+          IconButton(
+            onPressed: () {
+              ref.read(supabaseClientProvider).auth.signOut();
+            },
+            icon: const Icon(Icons.logout),
+          ),
         ],
       ),
       body: const Center(

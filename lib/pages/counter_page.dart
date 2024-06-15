@@ -21,7 +21,7 @@ class CounterPage extends ConsumerWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 24.0),
               child: Text(
-                '${ref.watch(counterNotifierProvider)}',
+                '${ref.watch(counterProvider)}',
                 style: Theme.of(context).textTheme.displayLarge,
               ),
             ),
@@ -30,7 +30,7 @@ class CounterPage extends ConsumerWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          ref.read(counterNotifierProvider.notifier).increment();
+          ref.read(counterProvider.notifier).state++;
         },
         child: const Icon(Icons.add),
       ),

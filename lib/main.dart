@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_playground/core/contants.dart';
+import 'package:riverpod_playground/pages/splash_screen_page.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'pages/home_page.dart';
@@ -26,7 +27,7 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ref.watch(themeSwitchProvider) ? kLightTheme : kDarkTheme,
-      home: const HomePageProviders(),
+      home: const SplashScreen(),
     );
   }
 }

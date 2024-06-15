@@ -23,13 +23,4 @@ class Quotes extends _$Quotes {
       state = [...state, quote];
     }
   }
-
-  // Future<List<QuoteDomain>> fetch() async {
-  //   var response = await ref.watch(dioProvider).get('/random');
-  //   if (response.statusCode == 200) {
-  //     return [for (final q in response.data) QuoteDomain.fromMap(q)];
-  //   }
-  //
-  //   return [];
-  // }
 }
